@@ -32,7 +32,7 @@ while times < 10:
             # print(essid.group(1))
     
     times += 1
-    print("Run: {}", times)
+    print("Run: ", times)
     print(network_list)
     print("\n")
 
