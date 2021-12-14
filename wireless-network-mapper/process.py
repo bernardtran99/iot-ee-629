@@ -38,7 +38,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    display_table = {"Julian": 25, "Bob": 26, "Dan": 47, "Cornelius": 3}
+    display_table = get_table()
     return render_template('table.html', display_table=display_table)
 
 if __name__ == "__main__":
