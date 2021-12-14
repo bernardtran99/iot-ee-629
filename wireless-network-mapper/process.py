@@ -2,6 +2,7 @@ import sys
 import time
 import subprocess
 import os
+import re
 
 networkList = ()
 
@@ -9,4 +10,6 @@ networkList = ()
 result = subprocess.Popen(["sudo","iwlist","wlan0","scan","|","grep","ESSID"],stdout=subprocess.PIPE, universal_newlines=True)
 output, error = result.communicate()
 
-print(output)
+for line in output:
+    if re.search("ESSID",line):
+        print(line)
