@@ -11,5 +11,5 @@ result = subprocess.Popen(["sudo","iwlist","wlan0","scan"],stdout=subprocess.PIP
 output, error = result.communicate()
 
 for line in output.split("\n"):
-    if re.search("ESSID",line):
-        print(line)
+    if re.search('ESSID:"(.*)"',line):
+        print(line.group(1))
