@@ -1,9 +1,10 @@
 import sys
 import time
 import subprocess
+import os
 
 networkList = ()
 
-result = subprocess.run(['sudo iwlist' ], stdout=subprocess.PIPE).decode('utf-8')
+result = subprocess.run(["ls","-l"])
 
 print(result)
