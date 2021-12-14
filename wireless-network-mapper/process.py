@@ -13,4 +13,4 @@ output, error = result.communicate()
 for line in output.split("\n"):
     if re.search('ESSID',line):
         essid = re.search('ESSID:"(.*)"',line)
-        print(essid)
+        print(essid.group(1))
