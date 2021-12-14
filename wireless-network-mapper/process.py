@@ -34,4 +34,5 @@ while times < 10:
     print(network_list)
     print("\n")
     times += 1
+    
     time.sleep(10)
