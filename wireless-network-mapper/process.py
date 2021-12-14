@@ -14,9 +14,9 @@ output, error = result.communicate()
 
 for line in output.split("\n"):
     signal_level = 0
-    if re.search('Signal level',line):
+    if re.search('Signal',line):
         signal = re.search('Signal level=(.*) dbm',line)
-        signal_level = signal.group(1)
+        print(signal)
     if re.search('ESSID',line):
         essid = re.search('ESSID:"(.*)"',line)
         network_list[essid.group(1)] = signal_level
