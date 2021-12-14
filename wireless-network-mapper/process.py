@@ -13,7 +13,6 @@ output, error = result.communicate()
 
 
 for line in output.split("\n"):
-    signal_level = 0
     if re.search('Signal',line):
         signal = re.search('Signal level=(.*) dBm',line)
         signal_level = signal.group(1)
