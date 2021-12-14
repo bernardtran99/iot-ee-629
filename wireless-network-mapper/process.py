@@ -15,7 +15,7 @@ output, error = result.communicate()
 for line in output.split("\n"):
     signal_level = 0
     if re.search('Signal',line):
-        signal = re.search('Signal level=(.*) dbm',line)
+        signal = re.search('Signal(.*)',line)
         print(signal)
     if re.search('ESSID',line):
         essid = re.search('ESSID:"(.*)"',line)
