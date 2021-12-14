@@ -6,5 +6,3 @@ import os
 networkList = ()
 
 result = subprocess.run(["ls","-l"])
-
-print(result)
