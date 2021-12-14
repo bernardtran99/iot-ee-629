@@ -5,7 +5,7 @@
 import sys
 import time
 import subprocess
-from flask import Flask, redirect, url_for, request
+from flask import *
 
 network_dict = {}
 
