@@ -7,14 +7,14 @@ from datetime import datetime
 
 
 
-network_list = {"ESSID":[]}
+network_list = {"ESSID":0}
 
 times = 0
 
 while times < 10:
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-    network_list["ESSID"].append(current_time)
+    network_list["ESSID"] = current_time
 
     result = subprocess.Popen(["sudo","iwlist","wlan0","scan"],stdout=subprocess.PIPE, universal_newlines=True)
     output, error = result.communicate()
@@ -32,5 +32,6 @@ while times < 10:
             # print(essid.group(1))
 
     print(network_list)
+    print("\n")
     times += 1
     time.sleep(10)
