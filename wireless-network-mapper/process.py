@@ -30,9 +30,10 @@ while times < 10:
             essid = re.search('ESSID:"(.*)"',line)
             network_list[essid.group(1)] = signal_level
             # print(essid.group(1))
-
+    
+    times += 1
+    print("Run: {}", times)
     print(network_list)
     print("\n")
-    times += 1
-    
+
     time.sleep(10)
